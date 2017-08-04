@@ -11,8 +11,8 @@ package chap7;
  */
  class A {
   
-     A(){
-         System.out.println("A");
+     A(String s ){
+         System.out.println(s);
   
   }
      
@@ -20,15 +20,22 @@ package chap7;
 
 class B {
 
-    B(){
-    System.out.println("B");
+    B (String s){
+    System.out.println(s);
 
 }
 
 }
 
-public class C extends A {
-B b = new B();
+ class C extends A {
+    
+   C(){
+   super("A");
+   
+   } 
+   
+    
+
 static C c = new C();
 
     public static void main(String[] args) {
